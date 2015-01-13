@@ -1,0 +1,836 @@
+﻿/* --- MAIN SETTNGS ----------------------------------------------------------
+------------------------------------------------------------------------------ */
+
+@import "./reset.css";
+
+@import "./popapp.less";
+
+@font-face {
+	font-family: Intro;
+	src: url(./font/Intro.ttf);
+}
+
+@font-face {
+	font-family: Intro;
+	src: url(./font/Intro.woff);
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background: #000 url(../source/vakansy_back.png) center top no-repeat;
+	position: relative;
+}
+
+.clear:after {
+	display: table;
+	content: "";
+	clear: both;
+	*zoom: 1;
+}
+
+/* --- CONTENT WRAPPER -------------------------------------------------------
+------------------------------------------------------------------------------ */
+
+#main-wrapper {
+	background: transparent url(../source/texture.png) 0 0 repeat;
+	display: table;
+	width: 100%;
+	padding: 0;
+	left: 0;
+	top: 0;
+
+	.content-area {
+		position: relative;
+		display: table;
+		margin: 0 auto;
+		height: 100%;
+		width: 940px;
+
+		//LOGOTYPE STYLE
+		.logotype {
+			z-index: 9999 !important;
+			position: relative;
+			margin-top: 40px;
+			display: block;
+			height: 61px;
+			width: 199px;
+			float: left;
+
+			a:link,
+			a:active,
+			a:visited,
+			a:hover {
+				border: none;
+			}
+		}
+
+		//NAVIGATION STYLE
+		#navigation {
+			z-index: 9999 !important;
+			position: relative;
+			display: table;
+			float: right;
+			padding: 0;
+
+			.menu {
+				list-style: none;
+				display: block;
+				padding: 0;
+				margin: 0;
+
+				li {
+					z-index: 9999 !important;
+					padding: 50px 8px 0 8px;
+					display: inline-block;
+					position: relative;
+
+					a:link,
+					a:active,
+					a:visited {
+						font: normal 13px/40px Intro, sans-serif;
+						text-transform: uppercase;
+						text-decoration: none;
+						display: block;
+						opacity: .35;
+						float: left;
+						color: #fff;
+
+						&:hover {
+							opacity: 1;
+						}
+					}
+
+					a.active {
+						opacity: 1;
+					}
+
+					ul.sub-menu1 {
+						padding: 100px 10px 15px 15px;
+						z-index: 1 !important;
+						position: absolute;
+						list-style: none;
+						display: none;
+						left: -10px;
+						top: 0;
+
+						li {
+							position: relative;
+							display: block;
+							height: 25px;
+							padding: 0;
+
+							a:link,
+							a:visited,
+							a:active {
+								line-height: 25px;
+								display: block;
+								height: 25px;
+								padding: 0;
+							}
+
+							ul.sub-menu2-right {
+								position: absolute;
+								list-style: none;
+								display: none;
+								width: 500px;
+								float: left;
+								padding: 0;
+								left: 50px;
+								top: 0;
+
+								li {
+									background: transparent url(../source/icon_set_40x40.png) 15px -1247px no-repeat;
+									padding: 0 0 0 50px;
+									display: block;
+									height: 25px;
+
+									-webkit-transform: skew(20deg);
+									-mox-transform: skew(20deg);
+									-o-transform: skew(20deg);
+									transform: skew(20deg);
+
+									a:link,
+									a:visited,
+									a:active {
+										-webkit-transform: skew(0deg);
+										-mox-transform: skew(0deg);
+										-o-transform: skew(0deg);
+										transform: skew(0deg);
+									}
+
+									&:hover {
+										background: transparent url(../source/icon_set_40x40.png) 15px -1207px no-repeat;
+									}
+								}
+							}
+
+							ul.sub-menu2-left {
+								position: absolute;
+								list-style: none;
+								display: none;
+								width: 400px;
+								left: -402px;
+								padding: 0;
+								top: 0;
+
+								li {
+									background: transparent url(../source/icon_set_40x40.png) right -1247px no-repeat;
+									padding: 0 35px 0 0;
+									display: block;
+									height: 25px;
+									float: right;
+
+									-webkit-transform: skew(20deg);
+									-mox-transform: skew(20deg);
+									-o-transform: skew(20deg);
+									transform: skew(20deg);
+
+									a:link,
+									a:visited,
+									a:active {
+										-webkit-transform: skew(0deg);
+										-mox-transform: skew(0deg);
+										-o-transform: skew(0deg);
+										transform: skew(0deg);
+									}
+
+									&:hover {
+										background: transparent url(../source/icon_set_40x40.png) right -1207px no-repeat;
+									}
+								}
+
+								li::after {
+									conternt: '';
+									clear: both;
+								}
+							}
+
+							&:hover > ul.sub-menu2-right {
+								display: block;
+							}
+
+							&:hover > ul.sub-menu2-left {
+								display: block;
+							}
+						}
+
+						li:nth-child(1) {
+							margin-left: -5px;
+						}
+
+						li:nth-child(2) {
+							margin-left: -5px;
+						}
+
+						li:nth-child(3) {
+							margin-left: -3px;
+						}
+
+						&:hover {
+							box-shadow: 1px 1px 1px rgba(0,0,0,.15);
+							background-color: rgba(139,153,147,.15);
+							border-radius: 0 0 5px 5px;
+
+							-webkit-transform: skew(-20deg);
+							-mox-transform: skew(-20deg);
+							-o-transform: skew(-20deg);
+							transform: skew(-20deg);
+
+							a:link,
+							a:active,
+							a:visited,
+							a:hover {
+								-webkit-transform: skew(20deg);
+								-mox-transform: skew(20deg);
+								-o-transform: skew(20deg);
+								transform: skew(20deg);
+							}
+						}
+					}
+
+					&:hover > a {
+						cursor: pointer !important;
+						z-index: 9999 !important;
+						opacity: 1 !important;
+					}
+
+					&:hover > ul.sub-menu1 {
+						display: block;
+					}
+				}
+			}
+		}
+
+		//TOP ITEM LIST
+		#item-group-top {
+			margin: 130px auto 0 auto;
+			display: block;
+			height: 50px;
+			width: 940px;
+
+			ul {
+				position: relative;
+				list-style: none;
+				display: block;
+				height: 50px;
+				width: 940px;
+				padding: 0;
+
+				li {
+					padding: 0 0 0 45px;
+					margin: 0 240px 0 0;
+					display: block;
+					height: 50px;
+					float: left;
+
+					a:link,
+					a:visited,
+					a:active {
+						font: normal 18px/18px Intro, sans-serif;
+						text-decoration: none;
+						display: block;
+						height: 50px;
+						color: #fff;
+
+						&:hover {
+							color: #e6ba8b;
+						}
+					}
+				}
+
+				li:nth-child(1) {
+					background: transparent url(../source/icon_set_40x40.png) left -863px no-repeat;
+					padding-top: 10px;
+					height: 40px;
+				}
+
+				li:nth-child(2) {
+					background: transparent url(../source/icon_set_40x40.png) left -965px no-repeat;
+					padding-top: 10px;
+					height: 40px;
+				}
+
+				li:nth-child(3) {
+					background: transparent url(../source/icon_set_40x40.png) left -1342px no-repeat;
+					padding-top: 10px;
+					margin-right: 0;
+					height: 40px;
+				}
+			}
+		}
+
+		//PAGE SLOGAN
+		.page-slogan {
+			margin: 40px 0 0 0;
+			display: block;
+			float: left;
+
+			p {
+				text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+				font: normal 60px Intro, sans-serif;
+				margin-right: 20px;
+				color: #fff;
+				float: left;
+			}
+
+			a:link,
+			a:visited,
+			a:active {
+				font: normal 18px/29px Intro, sans-serif;
+				text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+				padding-top: 7px;
+				display: block;
+				color: #e6ba8b;
+				height: 60px;
+				width: 275px;
+				float: left;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		//VAKANSY AREA
+		p.vakansy-text {
+			font: normal 14px/18px Arial, sans-serif;
+			text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+			margin: 50px 0 20px 0;
+			display: block;
+			width: 940px;
+			color: #fff;
+
+			span {
+				font: bold 18px/22px Arial, sans-serif;
+			}
+		}
+
+		.vakansy-area {
+			position: relative;
+			margin-top: 20px;
+			display: table;
+			width: 940px;
+
+			p.vakansy-header {
+				font: normal 28px Intro, sans-serif;
+				color: #e6ba8b;
+			}
+
+			.vakansy-description {
+				border: 1px solid #fff;
+				border-radius: 15px;
+				position: relative;
+				display: table;
+				padding: 15px;
+				width: 940px;
+
+				.vakansy-description-pojelania {
+					display: block;
+					float: left;
+					width: 50%;
+
+					p {
+						text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+						font: normal 18px Intro, sans-serif;
+						color: #fff;
+					}
+
+					ul {
+						display: block;
+						padding: 0;
+
+						li {
+							background: transparent url(../source/icon_set_40x40.png) left -1692px no-repeat;
+							text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+							font: normal 14px Arial, sans-serif;
+							padding-left: 40px;
+							display: block;
+							height: 30px;
+							color: #fff;
+						}
+					}
+				}
+
+				.vakansy-description-obyazannosti {
+					display: block;
+					float: left;
+					width: 50%;
+
+					p {
+						text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+						font: normal 18px Intro, sans-serif;
+						color: #fff;
+					}
+
+					ul {
+						display: block;
+						padding: 0;
+
+						li {
+							background: transparent url(../source/icon_set_40x40.png) left -1692px no-repeat;
+							text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+							font: normal 14px Arial, sans-serif;
+							padding-left: 40px;
+							display: block;
+							height: 30px;
+							color: #fff;
+						}
+					}
+				}
+
+				p.uslovia-header {
+					text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+					font: normal 18px Intro, sans-serif;
+					margin-bottom: 10px;
+					color: #fff;
+				}
+
+				p.uslovia-text{
+					text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+					font: normal 14px Arial, sans-serif;
+					margin-bottom: 20px;
+					disply: block;
+					width: 100%;
+					color: #fff;
+				}
+
+				p.mesto {
+					text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+					font: normal 18px Intro, sans-serif;
+					margin-right: 180px;
+					display: block;
+					height: 30px;
+					float: left;
+					color: #fff;
+
+					span {
+						font-size: 14px;
+					}
+				}
+
+				p.phone {
+					text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+					font: normal 18px Intro, sans-serif;
+					display: block;
+					height: 30px;
+					float: left;
+					color: #fff;
+
+					span {
+						font-size: 14px;
+					}
+				}
+
+				p.stavka {
+					text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+					font: normal 18px Intro, sans-serif;
+					display: block;
+					height: 30px;
+					float: right;
+					color: #fff;
+				}
+			}
+		}
+
+		//SOCIAL ICON GROUP
+		.social-icon-group {
+			margin-right: 125px;
+			position: relative;
+			display: block;
+			height: 40px;
+			float: left;
+			padding: 0;
+			top: 30px;
+
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+
+				li {
+					display: inline-block;
+					height: 40px;
+					width: 40px;
+					margin: 0;
+
+					a:link,
+					a:visited,
+					a:active,
+					a:hover {
+						display: block;
+						border: none;
+						height: 40px;
+						width: 40px;
+						paddig: 0;
+						margin: 0;
+					}
+				}
+
+				li:nth-child(1) {
+					a:link,
+					a:visited,
+					a:active {
+						background: transparent url(../source/icon_set_40x40.png) center 0 no-repeat;
+
+						-webkit-transition: background .2s ease-in-out;
+						-moz-transition: background .2s ease-in-out;
+						-o-transition: background .2s ease-in-out;
+						transition: background .2s ease-in-out;
+
+						&:hover {
+							background: transparent url(../source/icon_set_40x40.png) center -40px no-repeat;
+						}	
+					}
+				}
+
+				li:nth-child(2) {
+					a:link,
+					a:visited,
+					a:active {
+						background: transparent url(../source/icon_set_40x40.png) center -80px no-repeat;
+
+						-webkit-transition: background .2s ease-in-out;
+						-moz-transition: background .2s ease-in-out;
+						-o-transition: background .2s ease-in-out;
+						transition: background .2s ease-in-out;
+
+						&:hover {
+							background: transparent url(../source/icon_set_40x40.png) center -120px no-repeat;
+						}	
+					}
+				}
+
+				li:nth-child(3) {
+					a:link,
+					a:visited,
+					a:active {
+						background: transparent url(../source/icon_set_40x40.png) center -160px no-repeat;
+
+						-webkit-transition: background .2s ease-in-out;
+						-moz-transition: background .2s ease-in-out;
+						-o-transition: background .2s ease-in-out;
+						transition: background .2s ease-in-out;
+
+						&:hover {
+							background: transparent url(../source/icon_set_40x40.png) center -200px no-repeat;
+						}	
+					}
+				}
+
+				li:nth-child(4) {
+					a:link,
+					a:visited,
+					a:active {
+						background: transparent url(../source/icon_set_40x40.png) center -240px no-repeat;
+
+						-webkit-transition: background .2s ease-in-out;
+						-moz-transition: background .2s ease-in-out;
+						-o-transition: background .2s ease-in-out;
+						transition: background .2s ease-in-out;
+
+						&:hover {
+							background: transparent url(../source/icon_set_40x40.png) center -280px no-repeat;
+						}	
+					}
+				}
+
+				li:nth-child(5) {
+					a:link,
+					a:visited,
+					a:active {
+						background: transparent url(../source/icon_set_40x40.png) center -320px no-repeat;
+
+						-webkit-transition: background .2s ease-in-out;
+						-moz-transition: background .2s ease-in-out;
+						-o-transition: background .2s ease-in-out;
+						transition: background .2s ease-in-out;
+
+						&:hover {
+							background: transparent url(../source/icon_set_40x40.png) center -360px no-repeat;
+						}	
+					}
+				}
+			}
+		}
+
+		//LINK BOX
+		.link-box {
+			text-align: center;
+			position: relative;
+			display: block;
+			height: 40px;
+			width: 200px;
+			float: left;
+			top: 30px;
+
+			a:link,
+			a:visited,
+			a:active {
+				font: normal 18px/40px Intro, sans-serif;
+				color: #e6ba8b;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		//CONTACTS DATA
+		.contacts-data {
+			background: transparent url(../source/icon_set_40x40.png) right -400px no-repeat;
+			padding-right: 40px;
+			margin-right: 50px;
+			position: relative;
+			line-height: 18px;
+			text-align: right;
+			display: block;
+			width: 250px;
+			float: right;
+			top: 30px;
+
+			.phone {
+				text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+				font: normal 28px Intro, sans-serif;
+				text-align: right;
+				color: #fff;
+
+				span {
+					text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+					font: normal 22px Intro, sans-serif;
+					text-align: right;
+					color: #fff;
+				}
+			}
+
+			.adres {
+				text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+				font: normal 14px Intro, sans-serif;
+				text-align: right;
+				color: #fff;
+			}
+		}
+	}
+
+	//FOOTER STYLE
+	#footer {
+		background: #202020 url(../source/texture.png) 0 0 repeat;
+		margin: 75px auto 0 auto;
+		position: relative;
+		padding-top: 20px;
+		display: block;
+		height: 86px;
+		width: 100%;
+
+		ul.footer-menu {
+			list-style: none;
+			display: block;
+			margin: 0 auto;
+			width: 940px;
+			padding: 0;
+
+			li {
+				display: inline-block;
+				padding: 0 23px;
+				height: 65px;
+				margin: 0;
+
+				a:link,
+				a:visited,
+				a:active {
+					font: normal 13px Intro, sans-serif;
+					text-transform: uppercase;
+					text-decoration: none;
+					text-align: center;
+					display: block;
+					height: 65px;
+					color: #fff;
+					float: left;
+					opacity: 0;
+				}
+			}
+
+			li:nth-child(1) {
+				background: transparent url(../source/icon_set_40x40.png) center -540px no-repeat;
+				opacity: .5;
+
+				&:hover {
+					cursor: pointer;
+					opacity: 1;
+
+					a:link,
+					a:visited,
+					a:active,
+					a:hover {
+						opacity: 1;
+					}
+				}
+			}
+
+			li:nth-child(2) {
+				background: transparent url(../source/icon_set_40x40.png) center -640px no-repeat;
+				opacity: .5;
+
+				&:hover {
+					cursor: pointer;
+					opacity: 1;
+
+					a:link,
+					a:visited,
+					a:active,
+					a:hover {
+						opacity: 1;
+					}
+				}
+			}
+
+			li:nth-child(3) {
+				background: transparent url(../source/icon_set_40x40.png) center -740px no-repeat;
+				opacity: .5;
+
+				&:hover {
+					cursor: pointer;
+					opacity: 1;
+
+					a:link,
+					a:visited,
+					a:active,
+					a:hover {
+						opacity: 1;
+					}
+				}
+			}
+
+			li:nth-child(4) {
+				background: transparent url(../source/icon_set_40x40.png) center -840px no-repeat;
+				opacity: .5;
+
+				&:hover {
+					cursor: pointer;
+					opacity: 1;
+
+					a:link,
+					a:visited,
+					a:active,
+					a:hover {
+						opacity: 1;
+					}
+				}
+			}
+
+			li:nth-child(5) {
+				background: transparent url(../source/icon_set_40x40.png) center -940px no-repeat;
+				opacity: .5;
+
+				&:hover {
+					cursor: pointer;
+					opacity: 1;
+
+					a:link,
+					a:visited,
+					a:active,
+					a:hover {
+						opacity: 1;
+					}
+				}
+			}
+
+			li:nth-child(6) {
+				background: transparent url(../source/icon_set_40x40.png) center -1040px no-repeat;
+				opacity: .5;
+
+				&:hover {
+					cursor: pointer;
+					opacity: 1;
+
+					a:link,
+					a:visited,
+					a:active,
+					a:hover {
+						opacity: 1;
+					}
+				}
+			}
+
+			li:nth-child(7) {
+				background: transparent url(../source/icon_set_40x40.png) center -1140px no-repeat;
+				opacity: .5;
+
+				&:hover {
+					cursor: pointer;
+					opacity: 1;
+
+					a:link,
+					a:visited,
+					a:active,
+					a:hover {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
