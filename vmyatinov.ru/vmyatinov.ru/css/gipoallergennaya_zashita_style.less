@@ -21,7 +21,7 @@ html, body {
 }
 
 body {
-	background: #000 url(../source/gipoallergenoe_pokrytie_salon_back.png) center 200px no-repeat;
+	background: #000 url(../source/gipoallergenoe_pokrytie_salon_back.jpg) center 200px no-repeat;
 	position: relative;
 }
 
@@ -279,13 +279,18 @@ body {
 				height: 50px;
 				width: 940px;
 				padding: 0;
+				text-align: justify;
+				&:after{
+					content: '';
+					display: inline-block;
+					width: 100%;
+				}
 
 				li {
 					padding: 0 0 0 45px;
-					margin: 0 10px 0 0;
-					display: block;
+					display: inline-block;
 					height: 50px;
-					float: left;
+					vertical-align: top;
 
 					a:link,
 					a:visited,
