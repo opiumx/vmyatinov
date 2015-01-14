@@ -21,7 +21,7 @@ html, body {
 }
 
 body {
-	background: #000 url(../source/zashitnye_pokrytia_back.png) center 0 no-repeat;
+	background: #000 url(../source/zashitnye_pokrytia_back.jpg) center 0 no-repeat;
 	position: relative;
 }
 
@@ -279,13 +279,19 @@ body {
 				height: 50px;
 				width: 940px;
 				padding: 0;
+				text-align: justify;
+				&:after{
+					display: inline-block;
+					width: 100%;
+					content: '';
+
+				}
 
 				li {
 					padding: 0 0 0 45px;
-					margin: 0 55px 0 0;
 					display: block;
 					height: 50px;
-					float: left;
+					display: inline-block;
 
 					a:link,
 					a:visited,
