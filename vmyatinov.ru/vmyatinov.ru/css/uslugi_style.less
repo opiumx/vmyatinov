@@ -352,6 +352,7 @@ body {
 				display: table;
 				margin: 10px 0;
 				width: 100%;
+				box-sizing: border-box;
 
 				p {
 					font: normal 18px/50px Arial, sans-serif;
@@ -369,7 +370,7 @@ body {
 				}
 
 				p:nth-child(2) {
-					width: 380px;
+					width: 370px;
 				}
 			}
 
@@ -380,7 +381,6 @@ body {
 			}
 
 			li:nth-child(odd) {
-				box-shadow: inner 0 1px 0 rgba(255,255,255,1);
 				background-color: rgba(255,255,255,.35);
 				border-radius: 15px;
 			}
@@ -396,7 +396,7 @@ body {
 			float: left;
 		}
 
-		p.sales-icon {
+		.sales-icon {
 			background: transparent url(../source/icon_set_40x40.png) right -2387px no-repeat;
 			font: normal 18px/30px Intro, sans-serif;
 			text-shadow: 1px 1px 0 rgba(0,0,0,.25);
@@ -405,6 +405,11 @@ body {
 			height: 30px;
 			float: right;
 			color: #fff;
+			text-decoration: none;
+
+			&:hover{
+				text-decoration: underline;
+			}
 		}
 
 		//BOTTOM ITEM LIST
