@@ -1,18 +1,20 @@
 .dark-side {
-	background-color: rgba(41,41,41,.9);
+	background-color: rgba(41, 41, 41, .9);
 	z-index: 999999 !important;
 	position: fixed;
 	height: 100%;
 	width: 100%;
+	top: 0;
+	left: 0;
+}
 
 	.popapp-box {
 		border: 1px solid rgba(255,255,255,.75);
-		margin: 300px auto 0 auto;
+		width: 960px;
+		background-color: #000;
 		border-radius: 10px;
-		position: relative;
-		overflow: hidden;
-		display: table;
 		padding: 0;
+		display: none;
 
 		.popapp-area-img {
 			text-align: center;
@@ -99,15 +101,11 @@
 		}
 
 		.popapp-area-text {
-			background-color: #000;
 			position: relative;
-			display: table;
-			padding: 0;
+			padding: 20px;
 			margin: 0;
 
 			.left-side {
-				display: block;
-				padding: 10px;
 				width: 215px;
 				float: left;
 
@@ -116,66 +114,39 @@
 					display: block;
 				}
 
-				p.sales-partner {
-					font: normal 24px/41px Intro, sans-serif;
-					margin-bottom: 40px;
+				.sales-partner {
+					font: normal 24px/41px Intro, sans-serif!important;
 					color: #fff;
-
-					span:before {
-						content: ' ';
-					}
 				}
 
-				a:link,
-				a:active,
-				a:visited {
-					font: normal 24px Intro, sans-serif;
-					color: #a8886c;
-
-					&:hover {
-						text-decoration: none;
-					}
-				}
 			}
 
 			.right-side {
-				display: block;
-				width: 700px;
+				width: 680px;
 				float: left;
 
-				h1 {
+				h5 {
 					font: bold 24px Arial, sans-serif;
-					padding: 20px 0;
 					width: 600px;
 					color: #fff;
-					margin: 0;
+					margin:0 0 20px;
+					padding-top: 10px;
 				}
 
 				p {
-					font: normal 14px/18px Arial, sans-serif;
-					color: #fff;
+					font: normal 14px/18px Arial, sans-serif!important;
+					color: #fff!important;
+					margin-bottom: 20px!important;
+					width: 100%!important;
 
 					span {
-						font-size: 18px;
+						font-size: 18px!important;
+						color: #ffffff!important;
+						margin: 0!important;
 					}
 				}
 
-				a.referal-partners:link,
-				a.referal-partners:active,
-				a.referal-partners:visited {
-					background: transparent url(../source/icon_set_40x40.png) left -670px no-repeat;
-					font: normal 14px/30px Intro, sans-serf;
-					display: inline-block;
-					padding-left: 50px; 
-					color: #a8886c;
-					height: 30px;
-					margin: 10px;
-					float: right;
 
-					&:hover {
-						text-decoration: none;
-					}
-				}
 			}
 		}
 
@@ -238,6 +209,35 @@
 					opacity: 1;
 				}
 			}
+
+		}
+		.partners-popup-bottom{
+			a:link,
+			a:active,
+			a:visited {
+				font: normal 24px Intro, sans-serif!important;
+				color: #a8886c!important;
+				text-decoration: underline!important;
+
+				&:hover {
+					text-decoration: none!important;
+				}
+			}
+			a.referal-partners:link,
+			a.referal-partners:active,
+			a.referal-partners:visited {
+				background: transparent url(../source/icon_set_40x40.png) left -670px no-repeat!important;
+				font: normal 14px/30px Intro, sans-serf!important;
+				display: inline-block!important;
+				padding-left: 50px!important;
+				color: #a8886c!important;
+				height: 30px!important;
+				float: right!important;
+				text-decoration: underline!important;
+
+				&:hover {
+					text-decoration: none!important;
+				}
+			}
 		}
 	}
-}
