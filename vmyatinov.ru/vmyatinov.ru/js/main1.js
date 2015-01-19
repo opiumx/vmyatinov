@@ -26,7 +26,7 @@ $(document).ready(function(){
 	}
 
 
-	$(".popup-link, .play-lnk, .gallery-item-images>a").fancybox({
+	$(".popup-link, .play-lnk, .gallery-item-images>a, .link a").fancybox({
 		padding : 0,
 		wrapCSS : 'popup-wrap',
 		helpers : {
@@ -39,7 +39,7 @@ $(document).ready(function(){
 			}
 		},
 		beforeShow:function(){
-			if(this.element.closest('.popup-link').length) {
+			if(this.element.closest('.popup-link, .link a').length) {
 				return false;
 			}
 			$('.fancybox-inner').append('<div class="social-icon-box"><a href="./#.html" title="" target="_self" class="facebook"></a><a href="./#.html" title="" target="_self" class="vkontakte"></a></div>');
