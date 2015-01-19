@@ -26,7 +26,7 @@ $(document).ready(function(){
 	}
 
 
-	$(".popup-link").fancybox({
+	$(".popup-link, .play-lnk").fancybox({
 		padding : 0,
 		helpers : {
 			overlay : {
