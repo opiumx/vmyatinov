@@ -7,15 +7,17 @@
 	top: 0;
 	left: 0;
 }
+.popup-wrap{
+	border: 1px solid rgba(255,255,255,.75)!important;
+	background-color: #000;
+	border-radius: 10px;
+	overflow: hidden!important;
 
+}
 	.popapp-box {
-		border: 1px solid rgba(255,255,255,.75);
 		width: 960px;
-		background-color: #000;
-		border-radius: 10px;
 		padding: 0;
 		display: none;
-		overflow: hidden;
 		position: relative;
 
 		.popapp-area-img {
@@ -165,55 +167,7 @@
 			top: 10px;
 		}
 
-		.social-icon-box {
-			position: absolute;
-			display: table;
-			padding: 0;
-			margin: 0;
-			left: 10px;
-			top: 10px;
-			z-index: 99999;
 
-			a.facebook:link,
-			a.facebook:active,
-			a.facebook:visited {
-				background: transparent url(../source/facebook.png) center center no-repeat;
-				display: inline-block;
-				margin-right: 5px;
-				height: 40px;
-				opacity: .5;
-				width: 40px;
-
-				-webkit-transition: opacity .25s ease-in-out;
-				-moz-transition: opacity .25s ease-in-out;
-				-o-transition: opacity .25s ease-in-out;
-				transition: opacity .25s ease-in-out;
-
-				&:hover {
-					opacity: 1;
-				}
-			}
-
-			a.vkontakte:link,
-			a.vkontakte:active,
-			a.vkontakte:visited {
-				background: transparent url(../source/vkontakte.png) center center no-repeat;
-				display: inline-block;
-				height: 40px;
-				opacity: .5;
-				width: 40px;
-
-				-webkit-transition: opacity .25s ease-in-out;
-				-moz-transition: opacity .25s ease-in-out;
-				-o-transition: opacity .25s ease-in-out;
-				transition: opacity .25s ease-in-out;
-
-				&:hover {
-					opacity: 1;
-				}
-			}
-
-		}
 		.partners-popup-bottom{
 			a:link,
 			a:active,
@@ -244,3 +198,52 @@
 			}
 		}
 	}
+.social-icon-box {
+	position: absolute;
+	display: table;
+	padding: 0;
+	margin: 0;
+	left: 10px;
+	top: 10px;
+	z-index: 99999;
+
+	a.facebook:link,
+	a.facebook:active,
+	a.facebook:visited {
+		background: transparent url(../source/facebook.png) center center no-repeat;
+		display: inline-block;
+		margin-right: 5px;
+		height: 40px;
+		opacity: .5;
+		width: 40px;
+
+		-webkit-transition: opacity .25s ease-in-out;
+		-moz-transition: opacity .25s ease-in-out;
+		-o-transition: opacity .25s ease-in-out;
+		transition: opacity .25s ease-in-out;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	a.vkontakte:link,
+	a.vkontakte:active,
+	a.vkontakte:visited {
+		background: transparent url(../source/vkontakte.png) center center no-repeat;
+		display: inline-block;
+		height: 40px;
+		opacity: .5;
+		width: 40px;
+
+		-webkit-transition: opacity .25s ease-in-out;
+		-moz-transition: opacity .25s ease-in-out;
+		-o-transition: opacity .25s ease-in-out;
+		transition: opacity .25s ease-in-out;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+}
