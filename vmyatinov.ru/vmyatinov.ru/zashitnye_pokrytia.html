@@ -4,10 +4,14 @@
 	<meta charset="utf-8">
     <title>Детейлинг-цетр Вмятинов</title>
     <link rel="stylesheet/less" type="text/css" href="./css/zashitnye_pokrytia_style.less">
+    <link rel="stylesheet/less" type="text/css" href="./css/jquery.fancybox.css">
+    <link rel="stylesheet/less" type="text/css" href="./css/send-photo-popup.less">
     <link rel="icon" type="image/png" href="./source/favicon.png">
     <script type="text/javascript" src="./js/selectivizr.js"></script>
     <script type="text/javascript" src="./js/jQuery.js"></script>
     <script type="text/javascript" src="./js/less.js"></script>
+    <script type="text/javascript" src="./js/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="./js/main1.js"></script>
 </head>
 <body>
 	<div id="main-wrapper">
@@ -97,7 +101,7 @@
 				</ul>
 			</div>
 			<p class="link-box">
-				<a href="./#.html" title="Оценка по фото" target="_self">Оценка по фото</a>
+				<a href="#send-photo" title="Оценка по фото" class="fancybox">Оценка по фото</a>
 			</p>
 			<div class="contacts-data">
 				<p class="phone"><span>(812)</span> 909-92-10</p>
@@ -117,5 +121,54 @@
 			</ul>
 		</div>
 	</div>
+	<div class="popapp-box" id="send-photo">
+		<div class="reviews-box">
+			<div class="send-photo">
+				<div class="block-title">
+					Отправить фото повреждения на оценку
+				</div>
+				<div class="adding-block">
+					<div class="adding-title">
+						Добавить фото
+					</div>
+					<div class="adding-btn-list">
+						<div class="adding-btn-item">
+							<input type="file"/>
+						</div>
+						<div class="adding-btn-item">
+							<input type="file"/>
+						</div>
+					</div>
+					<div class="add-more">
+						еще
+					</div>
+				</div>
+				<div class="client-info-block">
+					<label for="client-mail">
+						ваш e-mail:
+						<input type="text" name="client-mail" id="client-mail" placeholder="Введите ваш e-mail..."/>
+					</label>
+					<label for="client-number">
+						ваш номер телефона:
+						<input type="text" name="client-number" id="client-number" placeholder="Введите ваш телефон..."/>
+					</label>
+				</div>
+			</div>
+
+			<div class="your-question">
+				<div class="block-title">
+					Ваш вопрос
+				</div>
+				<textarea name="client-question" id="client-question" placeholder="Введите ваш вопрос..."></textarea>
+				<div class="send-btn-wrap">
+					<input type="button" value="ОТправить">
+				</div>
+
+			</div>
+
+			<div class="clear"></div>
+		</div>
+	</div>
+
 </body>
 </html>
